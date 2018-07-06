@@ -7,20 +7,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+//@Entity
 public class Cliente implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long codigo;
 	
 	private String nome;
 	private String cnpj;
-	private Responsavel responsavel;
-	private Endereco endereco;
-	private Contato contato;
+	private String responsavel;
+	private String endereco;
+	private String contato;
 	
 	
 	
@@ -42,22 +42,22 @@ public class Cliente implements Serializable{
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public Responsavel getResponsavel() {
+	public String getResponsavel() {
 		return responsavel;
 	}
-	public void setResponsavel(Responsavel responsavel) {
+	public void setResponsavel(String responsavel) {
 		this.responsavel = responsavel;
 	}
-	public Endereco getEndereco() {
+	public String getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(Endereco endereco) {
+	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Contato getContato() {
+	public String getContato() {
 		return contato;
 	}
-	public void setContato(Contato contato) {
+	public void setContato(String contato) {
 		this.contato = contato;
 	}
 	
