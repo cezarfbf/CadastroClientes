@@ -44,6 +44,34 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+       <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-jpa</artifactId>
+          </dependency>
+
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.11</version>
+		<scope>compile</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-entitymanager</artifactId>
+      </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    </dependency>
+      
+	
+
+		
 	</dependencies>
 
 	<build>
