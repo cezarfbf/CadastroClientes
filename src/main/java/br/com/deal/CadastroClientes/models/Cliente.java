@@ -14,22 +14,20 @@ public class Cliente implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long codigo;
+	private long idCliente;
 	
 	private String nome;
 	private String cnpj;
-	private String responsavel;
-	private String endereco;
-	private String contato;
+	private String uf;
 	
 	
-	
-	public long getCodigo() {
-		return codigo;
+		public Cliente(String nome, String cnpj, String uf) {
+		super();
+		this.nome = nome;
+		this.cnpj = cnpj;
+		this.uf = uf;
 	}
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
+		
 	public String getNome() {
 		return nome;
 	}
@@ -42,24 +40,21 @@ public class Cliente implements Serializable{
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public String getResponsavel() {
-		return responsavel;
+	
+	
+	public String getUf() {
+		return uf;
 	}
-	public void setResponsavel(String responsavel) {
-		this.responsavel = responsavel;
+	public void setUf(String uf) {
+		this.uf = uf;
 	}
-	public String getEndereco() {
-		return endereco;
+	public long getIdCliente() {
+		return idCliente;
 	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setIdCliente(long idCliente) {
+		this.idCliente = idCliente;
 	}
-	public String getContato() {
-		return contato;
-	}
-	public void setContato(String contato) {
-		this.contato = contato;
-	}
+	
 	
 	
 

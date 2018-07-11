@@ -1,10 +1,18 @@
 package br.com.deal.CadastroClientes.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Endereco {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long idEndereco;
 	private String bairro;
 	private String cidade;
-	private String estado;
 	private String rua;
 	private String numero;
 	private String cep;
@@ -29,12 +37,7 @@ public class Endereco {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	
 	public String getRua() {
 		return rua;
 	}
@@ -46,6 +49,12 @@ public class Endereco {
 	}
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+	public long getIdEndereco() {
+		return idEndereco;
+	}
+	public void setIdEndereco(long idEndereco) {
+		this.idEndereco = idEndereco;
 	}
 	
 	
