@@ -1,17 +1,20 @@
 package br.com.deal.CadastroClientes.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Telefone {
+public class Telefone implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idTelefone;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long codigo;
 	private String numero;
+	private long codigoCliente;;
 	
 	
 	
@@ -19,17 +22,24 @@ public class Telefone {
 		super();
 		this.numero = numero;
 	}
-	public long getIdTelefone() {
-		return idTelefone;
-	}
-	public void setIdTelefone(long idTelefone) {
-		this.idTelefone = idTelefone;
-	}
 	public String getNumero() {
 		return numero;
 	}
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
+	public long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+	public long getCodigoCliente() {
+		return codigoCliente;
+	}
+	public void setCodigoCliente(long codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+	
 
 }

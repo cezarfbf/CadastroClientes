@@ -1,17 +1,20 @@
 package br.com.deal.CadastroClientes.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Email {
+public class Email implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idEmail;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long codigo;
 	private String endereco;
+	private long codigoCliente;
 	
 	
 	
@@ -25,11 +28,18 @@ public class Email {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public long getIdEmail() {
-		return idEmail;
+	public long getCodigo() {
+		return codigo;
 	}
-	public void setIdEmail(long idEmail) {
-		this.idEmail = idEmail;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
+	public long getCodigoCliente() {
+		return codigoCliente;
+	}
+	public void setCodigoCliente(long codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+	
 
 }

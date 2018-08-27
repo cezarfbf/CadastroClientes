@@ -1,30 +1,26 @@
 package br.com.deal.CadastroClientes.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Endereco {
+public class Endereco implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idEndereco;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long codigo;
 	private String bairro;
 	private String cidade;
 	private String rua;
 	private String numero;
-	private String cep;
+	private String complemento;
+	private int cep;
 	
 	
-	
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
 	public String getBairro() {
 		return bairro;
 	}
@@ -50,12 +46,22 @@ public class Endereco {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public long getIdEndereco() {
-		return idEndereco;
+	public long getCodigo() {
+		return codigo;
 	}
-	public void setIdEndereco(long idEndereco) {
-		this.idEndereco = idEndereco;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
+	public String getComplemento() {
+		return complemento;
+	}
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+	public void setCep(int cep) {
+		this.cep = cep;
+	}
+	
 	
 	
 

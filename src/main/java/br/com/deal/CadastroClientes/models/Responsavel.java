@@ -1,18 +1,21 @@
 package br.com.deal.CadastroClientes.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Responsavel {
+public class Responsavel implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idResponsavel;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long codigo;
 	private String nome;
 	private String cpf;
+	private long codigoCliente;
 	
 	
 	
@@ -33,12 +36,19 @@ public class Responsavel {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public long getIdResponsavel() {
-		return idResponsavel;
+	public long getCodigo() {
+		return codigo;
 	}
-	public void setIdResponsavel(long idResponsavel) {
-		this.idResponsavel = idResponsavel;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
+	public long getCodigoCliente() {
+		return codigoCliente;
+	}
+	public void setCodigoCliente(long codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+	
 	
 	
 
